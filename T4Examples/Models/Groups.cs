@@ -7,15 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T4Examples
+namespace T4Examples.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Products
+    public partial class Groups
     {
+        public Groups()
+        {
+           // this.Users = new HashSet<Users>();
+        }
+    
         public System.Guid Id { get; set; }
-        public string DisplayName { get; set; }
-        public decimal Cost { get; set; }
+        public string Name { get; set; }
+    
+        public virtual ICollection<Users> Users { get; set; }
     }
 }

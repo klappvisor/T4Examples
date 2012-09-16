@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T4Examples
+namespace T4Examples.Models
 {
     using System;
     using System.Collections.Generic;
@@ -16,12 +16,12 @@ namespace T4Examples
     {
         public Users()
         {
-            this.AttestationPeriods = new HashSet<AttestationPeriods>();
-            this.MonthPoints = new HashSet<MonthPoints>();
-            this.Orders = new HashSet<Orders>();
-            this.Polls = new HashSet<Polls>();
-            this.Polls1 = new HashSet<Polls>();
-            this.Roles = new HashSet<Roles>();
+           // this.AttestationPeriods = new HashSet<AttestationPeriods>();
+           // this.MonthPoints = new HashSet<MonthPoints>();
+           // this.Orders = new HashSet<Orders>();
+           // this.Polls = new HashSet<Polls>();
+           // this.Polls1 = new HashSet<Polls>();
+           // this.Roles = new HashSet<Roles>();
         }
     
         public System.Guid Id { get; set; }

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T4Examples
+namespace T4Examples.Models
 {
     using System;
     using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace T4Examples
     {
         public AttestationPeriods()
         {
-            this.MonthPoints = new HashSet<MonthPoints>();
+           // this.MonthPoints = new HashSet<MonthPoints>();
         }
     
         public System.Guid Id { get; set; }

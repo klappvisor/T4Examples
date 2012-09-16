@@ -7,18 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T4Examples
+namespace T4Examples.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Variants
+    public partial class C__MigrationHistory
     {
-        public System.Guid Id { get; set; }
-        public string Answer { get; set; }
-        public int AnswersCount { get; set; }
-        public System.Guid PollId { get; set; }
-    
-        public virtual Polls Polls { get; set; }
+        public string MigrationId { get; set; }
+        public byte[] Model { get; set; }
+        public string ProductVersion { get; set; }
     }
 }

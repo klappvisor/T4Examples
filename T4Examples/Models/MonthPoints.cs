@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T4Examples
+namespace T4Examples.Models
 {
     using System;
     using System.Collections.Generic;

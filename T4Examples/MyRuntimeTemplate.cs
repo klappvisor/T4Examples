@@ -18,7 +18,7 @@ namespace T4Examples
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\WorkFolder\Projects\_Internal\!GitHub\T4Examples\T4Examples\MyRuntimeTemplate.tt"
+    #line 1 "d:\work\github\T4Examples\T4Examples\MyRuntimeTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "11.0.0.0")]
     public partial class MyRuntimeTemplate : MyRuntimeTemplateBase
     {
@@ -29,7 +29,7 @@ namespace T4Examples
         {
             this.Write("\r\nHello!\r\n");
             
-            #line 8 "C:\WorkFolder\Projects\_Internal\!GitHub\T4Examples\T4Examples\MyRuntimeTemplate.tt"
+            #line 8 "d:\work\github\T4Examples\T4Examples\MyRuntimeTemplate.tt"
  
 	var today = DateTime.Today;
 	int daysInMonth = DateTime.DaysInMonth(today.Year, today.Month);
@@ -39,35 +39,35 @@ namespace T4Examples
             #line hidden
             this.Write("Today is ");
             
-            #line 12 "C:\WorkFolder\Projects\_Internal\!GitHub\T4Examples\T4Examples\MyRuntimeTemplate.tt"
+            #line 12 "d:\work\github\T4Examples\T4Examples\MyRuntimeTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(today.Day));
             
             #line default
             #line hidden
             this.Write(" day from ");
             
-            #line 12 "C:\WorkFolder\Projects\_Internal\!GitHub\T4Examples\T4Examples\MyRuntimeTemplate.tt"
+            #line 12 "d:\work\github\T4Examples\T4Examples\MyRuntimeTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(daysInMonth));
             
             #line default
             #line hidden
             this.Write(" of ");
             
-            #line 12 "C:\WorkFolder\Projects\_Internal\!GitHub\T4Examples\T4Examples\MyRuntimeTemplate.tt"
+            #line 12 "d:\work\github\T4Examples\T4Examples\MyRuntimeTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(DateTime.Today.ToString("MMMM")));
             
             #line default
             #line hidden
             this.Write(" and ");
             
-            #line 12 "C:\WorkFolder\Projects\_Internal\!GitHub\T4Examples\T4Examples\MyRuntimeTemplate.tt"
+            #line 12 "d:\work\github\T4Examples\T4Examples\MyRuntimeTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(DateTime.Today.DayOfYear));
             
             #line default
             #line hidden
             this.Write(" day of year. \r\n\r\n");
             
-            #line 14 "C:\WorkFolder\Projects\_Internal\!GitHub\T4Examples\T4Examples\MyRuntimeTemplate.tt"
+            #line 14 "d:\work\github\T4Examples\T4Examples\MyRuntimeTemplate.tt"
 	int i = today.Day;
 	while(i <= daysInMonth) {
 		var current = today.AddDays(i - today.Day);
@@ -76,14 +76,14 @@ namespace T4Examples
             #line default
             #line hidden
             
-            #line 18 "C:\WorkFolder\Projects\_Internal\!GitHub\T4Examples\T4Examples\MyRuntimeTemplate.tt"
+            #line 18 "d:\work\github\T4Examples\T4Examples\MyRuntimeTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(GetDayOfWeekString(current)));
             
             #line default
             #line hidden
             this.Write("\r\n");
             
-            #line 19 "C:\WorkFolder\Projects\_Internal\!GitHub\T4Examples\T4Examples\MyRuntimeTemplate.tt"
+            #line 19 "d:\work\github\T4Examples\T4Examples\MyRuntimeTemplate.tt"
       i++; 
 	} 
 
@@ -94,7 +94,7 @@ namespace T4Examples
             return this.GenerationEnvironment.ToString();
         }
         
-        #line 24 "C:\WorkFolder\Projects\_Internal\!GitHub\T4Examples\T4Examples\MyRuntimeTemplate.tt"
+        #line 24 "d:\work\github\T4Examples\T4Examples\MyRuntimeTemplate.tt"
 
 	private string GetDayOfWeekString(DateTime dateTime) {
 		return String.Format("{0} - {1}", dateTime.ToShortDateString(), dateTime.DayOfWeek);

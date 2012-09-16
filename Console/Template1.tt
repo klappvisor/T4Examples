@@ -1,0 +1,25 @@
+﻿<#@ template debug="true"  hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ import namespace="System" #>
+using System;
+// This is code from template
+namespace T4Examples {
+<# PushIndent("    "); #>
+class TestConsole {
+<# PushIndent("    "); #>
+public static void Main (string[] args) {
+<# PushIndent("    "); #>
+var template = new MyRuntimeTemplate();
+string text = template.TransformText();
+Console.WriteLine(text);
+
+//TODO: place code here
+
+Console.ReadLine();
+<# PopIndent(); #>
+}
+<# PopIndent(); #>
+}
+<# PopIndent(); #>
+}
+

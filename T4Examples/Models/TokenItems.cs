@@ -7,20 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T4Examples
+namespace T4Examples.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class OrderItems
+    public partial class TokenItems
     {
         public System.Guid Id { get; set; }
-        public decimal Cost { get; set; }
-        public int Count { get; set; }
-        public string DisplayName { get; set; }
-        public System.Guid ProductId { get; set; }
-        public Nullable<System.Guid> Order_Id { get; set; }
-    
-        public virtual Orders Orders { get; set; }
+        public System.DateTime ExpireTime { get; set; }
+        public string Login { get; set; }
     }
 }

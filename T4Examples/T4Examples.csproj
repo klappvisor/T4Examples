@@ -11,6 +11,7 @@
     <AssemblyName>T4Examples</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.1.267\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -61,85 +64,138 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AttestationPeriods.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="C__MigrationHistory.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database.Context.cs">
+    <Compile Include="Models\Aspearin.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Database.Context.tt</DependentUpon>
+      <DependentUpon>Aspearin.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database.cs">
+    <Compile Include="Models\Aspearin.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Database.tt</DependentUpon>
+      <DependentUpon>Aspearin.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database.Designer.cs">
+    <Compile Include="Models\Aspearin.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Database.edmx</DependentUpon>
+      <DependentUpon>Aspearin.edmx</DependentUpon>
     </Compile>
-    <Compile Include="FridayConfigs.cs">
-      <DependentUpon>Database.tt</DependentUpon>
+    <Compile Include="Models\AttestationPeriods.cs">
+      <DependentUpon>Aspearin.tt</DependentUpon>
     </Compile>
-    <Compile Include="Groups.cs">
-      <DependentUpon>Database.tt</DependentUpon>
+    <Compile Include="Models\AttestationPeriodsViewModel.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
     </Compile>
-    <Compile Include="MonthPoints.cs">
-      <DependentUpon>Database.tt</DependentUpon>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>Aspearin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__MigrationHistoryViewModel.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FridayConfigs.cs">
+      <DependentUpon>Aspearin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FridayConfigsViewModel.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Groups.cs">
+      <DependentUpon>Aspearin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GroupsViewModel.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MappingInitializer.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspearinViewModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MonthPoints.cs">
+      <DependentUpon>Aspearin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MonthPointsViewModel.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderItems.cs">
+      <DependentUpon>Aspearin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderItemsViewModel.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Orders.cs">
+      <DependentUpon>Aspearin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrdersViewModel.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Polls.cs">
+      <DependentUpon>Aspearin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PollsViewModel.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Products.cs">
+      <DependentUpon>Aspearin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductsViewModel.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Roles.cs">
+      <DependentUpon>Aspearin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RolesViewModel.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TokenItems.cs">
+      <DependentUpon>Aspearin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TokenItemsViewModel.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Users.cs">
+      <DependentUpon>Aspearin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsersViewModel.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Variants.cs">
+      <DependentUpon>Aspearin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VariantsViewModel.cs">
+      <DependentUpon>AspearinViewModels.tt</DependentUpon>
     </Compile>
     <Compile Include="MyRuntimeTemplate.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MyRuntimeTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="OrderItems.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Orders.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Polls.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Products.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Roles.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TokenItems.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Users.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Variants.cs">
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <EntityDeploy Include="Database.edmx">
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Models\Aspearin.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Database.Designer.cs</LastGenOutput>
+      <LastGenOutput>Aspearin.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Database.Context.tt">
+    <None Include="Models\Aspearin.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Database.edmx</DependentUpon>
-      <LastGenOutput>Database.Context.cs</LastGenOutput>
+      <DependentUpon>Aspearin.edmx</DependentUpon>
+      <LastGenOutput>Aspearin.Context.cs</LastGenOutput>
     </None>
-    <None Include="Database.edmx.diagram">
-      <DependentUpon>Database.edmx</DependentUpon>
+    <None Include="Models\Aspearin.edmx.diagram">
+      <DependentUpon>Aspearin.edmx</DependentUpon>
     </None>
-    <None Include="Database.tt">
+    <None Include="Models\Aspearin.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Database.edmx</DependentUpon>
-      <LastGenOutput>Database.cs</LastGenOutput>
+      <DependentUpon>Aspearin.edmx</DependentUpon>
+      <LastGenOutput>Aspearin.cs</LastGenOutput>
+    </None>
+    <None Include="Models\AspearinViewModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AspearinViewModels.cs</LastGenOutput>
     </None>
     <None Include="MyRuntimeTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
@@ -149,11 +205,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Aspearin.sdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -176,6 +227,11 @@
       <ProductName>SQL Server Compact 4.0 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Aspearin.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

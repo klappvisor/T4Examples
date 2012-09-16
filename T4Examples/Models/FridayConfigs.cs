@@ -7,15 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T4Examples
+namespace T4Examples.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class C__MigrationHistory
+    public partial class FridayConfigs
     {
-        public string MigrationId { get; set; }
-        public byte[] Model { get; set; }
-        public string ProductVersion { get; set; }
+        public System.Guid Id { get; set; }
+        public bool IsClosed { get; set; }
+        public System.DateTime StartTime { get; set; }
+        public System.DateTime ExpiredTime { get; set; }
     }
 }

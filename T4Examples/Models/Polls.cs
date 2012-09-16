@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T4Examples
+namespace T4Examples.Models
 {
     using System;
     using System.Collections.Generic;
@@ -16,9 +16,9 @@ namespace T4Examples
     {
         public Polls()
         {
-            this.Variants = new HashSet<Variants>();
-            this.Users = new HashSet<Users>();
-            this.Users1 = new HashSet<Users>();
+           // this.Variants = new HashSet<Variants>();
+           // this.Users = new HashSet<Users>();
+           // this.Users1 = new HashSet<Users>();
         }
     
         public System.Guid Id { get; set; }

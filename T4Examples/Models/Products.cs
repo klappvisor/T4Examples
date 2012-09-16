@@ -7,15 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T4Examples
+namespace T4Examples.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TokenItems
+    public partial class Products
     {
         public System.Guid Id { get; set; }
-        public System.DateTime ExpireTime { get; set; }
-        public string Login { get; set; }
+        public string DisplayName { get; set; }
+        public decimal Cost { get; set; }
     }
 }

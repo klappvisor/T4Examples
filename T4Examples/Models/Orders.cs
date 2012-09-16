@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace T4Examples
+namespace T4Examples.Models
 {
     using System;
     using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace T4Examples
     {
         public Orders()
         {
-            this.OrderItems = new HashSet<OrderItems>();
+           // this.OrderItems = new HashSet<OrderItems>();
         }
     
         public System.Guid Id { get; set; }
